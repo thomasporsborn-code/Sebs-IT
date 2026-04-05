@@ -1,20 +1,118 @@
+function BrandLogo() {
+  return (
+    <div className="inline-flex items-center gap-3">
+      <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-cyan-300/30 bg-white/8 shadow-lg shadow-cyan-500/10 backdrop-blur">
+        <svg
+          viewBox="0 0 64 64"
+          className="h-7 w-7"
+          aria-hidden="true"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect x="8" y="10" width="48" height="34" rx="10" className="fill-slate-950 stroke-cyan-300/80" strokeWidth="3" />
+          <path
+            d="M22 24h20M22 32h13"
+            className="stroke-cyan-300"
+            strokeWidth="4"
+            strokeLinecap="round"
+          />
+          <path
+            d="M27 52l5-8 5 8"
+            className="stroke-violet-300"
+            strokeWidth="4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </div>
+      <div>
+        <div className="text-sm font-medium uppercase tracking-[0.25em] text-cyan-200/80">Sebs IT</div>
+        <div className="text-base font-semibold text-white">Digitalt, enkelt och personligt</div>
+      </div>
+    </div>
+  );
+}
+
+function WebsiteIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-6 w-6" aria-hidden="true" fill="none">
+      <rect x="3.5" y="5.5" width="17" height="13" rx="3" className="stroke-cyan-200" strokeWidth="1.8" />
+      <path d="M3.5 9.5h17" className="stroke-cyan-200/80" strokeWidth="1.8" strokeLinecap="round" />
+      <path d="M7 15h5" className="stroke-violet-200" strokeWidth="1.8" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function MapPinIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-6 w-6" aria-hidden="true" fill="none">
+      <path
+        d="M12 20s6-4.9 6-10a6 6 0 1 0-12 0c0 5.1 6 10 6 10Z"
+        className="stroke-cyan-200"
+        strokeWidth="1.8"
+        strokeLinejoin="round"
+      />
+      <circle cx="12" cy="10" r="2.3" className="stroke-violet-200" strokeWidth="1.8" />
+    </svg>
+  );
+}
+
+function MegaphoneIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-6 w-6" aria-hidden="true" fill="none">
+      <path
+        d="M5 12v-2.5c0-.6.4-1 1-1h2.3l7-3v12l-7-3H6c-.6 0-1-.4-1-1V12Z"
+        className="stroke-cyan-200"
+        strokeWidth="1.8"
+        strokeLinejoin="round"
+      />
+      <path d="M15 9.5a3.5 3.5 0 0 1 0 5" className="stroke-violet-200" strokeWidth="1.8" strokeLinecap="round" />
+      <path d="M8.5 14.5 10 18" className="stroke-cyan-200/80" strokeWidth="1.8" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function SupportIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-6 w-6" aria-hidden="true" fill="none">
+      <path
+        d="M6 12a6 6 0 1 1 12 0"
+        className="stroke-cyan-200"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+      />
+      <path
+        d="M7 12.5h-.5A1.5 1.5 0 0 0 5 14v1.5A1.5 1.5 0 0 0 6.5 17H8v-4.5Zm10 0h.5A1.5 1.5 0 0 1 19 14v1.5a1.5 1.5 0 0 1-1.5 1.5H16v-4.5Z"
+        className="stroke-violet-200"
+        strokeWidth="1.8"
+        strokeLinejoin="round"
+      />
+      <path d="M12 18.5h2.5" className="stroke-cyan-200/80" strokeWidth="1.8" strokeLinecap="round" />
+    </svg>
+  );
+}
+
 export default function LandingPage() {
   const services = [
     {
       title: 'Enkla hemsidor',
       text: 'Vi bygger snygga, snabba och mobilanpassade hemsidor för små företag som vill synas professionellt online utan att betala byråpriser.',
+      icon: WebsiteIcon,
     },
     {
       title: 'Google & lokal synlighet',
       text: 'Vi hjälper er att synas på Google med rätt företagsinformation, bättre lokalt genomslag och en tydlig närvaro där kunderna söker.',
+      icon: MapPinIcon,
     },
     {
       title: 'Sociala medier & marknadsföring',
       text: 'Vi hjälper er att komma igång med enkla kampanjer, innehåll och profiler på sociala medier så att fler kunder hittar er.',
+      icon: MegaphoneIcon,
     },
     {
       title: 'Löpande support',
       text: 'Behöver ni uppdatera öppettider, lägga upp erbjudanden eller få hjälp snabbt? Vi finns kvar även efter leverans.',
+      icon: SupportIcon,
     },
   ];
 
@@ -23,6 +121,15 @@ export default function LandingPage() {
       <section className="relative overflow-hidden border-b border-white/10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.22),transparent_30%),radial-gradient(circle_at_top_left,rgba(168,85,247,0.18),transparent_25%)]" />
         <div className="relative mx-auto max-w-6xl px-6 py-24 lg:px-8 lg:py-32">
+          <div className="mb-16 flex items-center justify-between">
+            <BrandLogo />
+            <a
+              href="#om-oss"
+              className="hidden rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-medium text-slate-200 transition hover:bg-white/10 sm:inline-flex"
+            >
+              Om oss
+            </a>
+          </div>
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div>
               <div className="mb-4 inline-flex rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-1 text-sm text-cyan-200">
@@ -97,7 +204,9 @@ export default function LandingPage() {
               key={service.title}
               className="group rounded-[1.75rem] border border-white/10 bg-white/5 p-7 shadow-lg transition duration-300 hover:-translate-y-1 hover:bg-white/7"
             >
-              <div className="mb-5 h-12 w-12 rounded-2xl bg-gradient-to-br from-cyan-400/20 to-violet-400/20" />
+              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-400/20 to-violet-400/20 ring-1 ring-white/10">
+                <service.icon />
+              </div>
               <h3 className="text-xl font-semibold text-white">{service.title}</h3>
               <p className="mt-3 leading-7 text-slate-300">{service.text}</p>
             </div>
@@ -142,11 +251,11 @@ export default function LandingPage() {
             </p>
             <div className="mt-6 space-y-4 rounded-2xl bg-white/5 p-5 text-slate-300">
               <p>
-                <span className="font-semibold text-white">[Namn 1]</span> – Intresserad av webb,
+                <span className="font-semibold text-white">Sebastian</span> – Intresserad av webb,
                 teknik och digitala lösningar. Ansvarar för hemsidor och design.
               </p>
               <p>
-                <span className="font-semibold text-white">[Namn 2]</span> – Brinner för marknadsföring,
+                <span className="font-semibold text-white">Raymond</span> – Brinner för marknadsföring,
                 kundkontakt och att hjälpa småföretag att synas bättre online.
               </p>
             </div>
