@@ -245,22 +245,27 @@ export default function LandingPage() {
           </div>
 
           <div className="rounded-[2rem] border border-white/10 bg-slate-900/80 p-8 shadow-2xl">
-            <h3 className="text-2xl font-semibold">Presentera er här</h3>
+            <p className="text-sm font-medium uppercase tracking-[0.2em] text-cyan-300">Teamet</p>
+            <h3 className="mt-3 text-2xl font-semibold">Möt Sebastian och Raymond</h3>
             <p className="mt-4 text-slate-300">
-              Lägg in era namn, en kort presentation och gärna en bild på er. Exempel:
+              Vi kombinerar teknik, design och marknadsföring för att hjälpa småföretag att få en
+              starkare digital närvaro utan onödigt krångel.
             </p>
             <div className="mt-6 space-y-4 rounded-2xl bg-white/5 p-5 text-slate-300">
               <p>
-                <span className="font-semibold text-white">Sebastian</span> – Intresserad av webb,
-                teknik och digitala lösningar. Ansvarar för hemsidor och design.
+                <span className="font-semibold text-white">Sebastian</span> arbetar med hemsidor,
+                struktur och design. Fokus ligger på att skapa moderna och tydliga lösningar som gör
+                det enkelt för företag att presentera sig professionellt online.
               </p>
               <p>
-                <span className="font-semibold text-white">Raymond</span> – Brinner för marknadsföring,
-                kundkontakt och att hjälpa småföretag att synas bättre online.
+                <span className="font-semibold text-white">Raymond</span> fokuserar på marknadsföring,
+                kundkontakt och synlighet. Målet är att hjälpa företag att nå fler kunder och bygga en
+                närvaro som märks lokalt.
               </p>
             </div>
             <div className="mt-6 rounded-2xl border border-cyan-400/20 bg-cyan-400/10 p-5 text-sm text-cyan-100">
-              Tips: byt ut den här rutan mot en riktig presentation av er själva för att göra sidan mer personlig och trovärdig.
+              Tillsammans arbetar vi snabbt, personligt och med fokus på lösningar som faktiskt hjälper
+              små företag att växa.
             </div>
           </div>
         </div>
